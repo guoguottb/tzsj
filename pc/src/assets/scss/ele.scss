@@ -1,0 +1,103 @@
+// 覆写的默认主题
+$primary: #2d83ea;
+$primary-fade: #599ef1;
+.ele {
+  // 【button】
+  .el-button {
+    &.el-button--primary {
+      background-color: $primary;
+      border: 1px solid $primary;
+    }
+  }
+  .el-button--primary.is-disabled, .el-button--primary.is-disabled:active, .el-button--primary.is-disabled:focus, .el-button--primary.is-disabled:hover {
+    background-color: $primary-fade;
+    border: 1px solid $primary-fade;
+  }
+  .el-button--primary {
+    &:focus, &:hover {
+      background-color: $primary-fade;
+      border: 1px solid $primary-fade;
+    }
+  }
+  .el-button--small:not(.el-button--text) {
+    padding: 9px 25px;
+  }
+  .el-input-group__append {
+    .el-button {
+      padding: 9px 15px;
+    }
+  }
+  .el-dropdown .el-dropdown__caret-button {
+    padding: 9px 5px 8px 5px;
+  }
+  .el-button--text {
+    color: #569ddf;
+  }
+  // 【el-dropdown】
+  .el-checkbox__input.is-checked+.el-checkbox__label {
+    color: #666666;
+  }
+  // 【el-pagination】
+  .el-pagination.is-background .el-pager li:not(.disabled).active {
+    background-color: $primary;
+  }
+  // 【el-menu】
+  .el-menu-item:focus, .el-menu-item:hover, .el-submenu__title:hover {
+    background-color: rgba(54, 134, 225, 0.1);
+  }
+  .el-menu-item.is-active {
+    color: #3686e1;
+    border-right: 3px solid #3686e1;
+    background-color: rgba(54, 134, 225, 0.1);
+  }
+  // 【el-checkbox】
+  .el-checkbox__input.is-checked .el-checkbox__inner, .el-checkbox__input.is-indeterminate .el-checkbox__inner {
+    background-color: $primary;
+    border-color: $primary;
+  }
+  .el-checkbox.is-bordered.is-checked {
+    border-color: $primary;
+    .el-checkbox__input.is-checked + .el-checkbox__label {
+      color: $primary;
+    }
+  }
+  // 【el-radio】
+  .el-radio__input.is-checked .el-radio__inner {
+    border-color: $primary;
+    background: $primary;
+  }
+  // 【el-backtop】
+  .el-backtop, .el-calendar-table td.is-today {
+    color: $primary;
+  }
+  .g-more-column {
+    i {
+      color: $primary;
+    }
+  }
+
+  // 服务管理列表
+  .g-a{
+    span{
+      display: inline-block;
+    }
+    display: inline-block;
+    color: #333;
+    width: 100%;
+    height: 100%;
+    padding: 0 0 0 20px;
+    text-decoration: none;
+    &:hover {
+      color: $primary;
+      background:rgba(239,246,251,1);
+    }
+  }
+  .g-type-active{
+    color: $primary;
+    background:rgba(239,246,251,1);
+    .list-item-active{
+      background: $primary;
+      color:#fff;
+    }
+  }
+}

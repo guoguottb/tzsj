@@ -1,0 +1,44 @@
+/*
+  为了方便管理，此文件只存放和本工程相关的样式，如头部、主体等等，不存放element相关的样式。
+*/
+.ele {
+  // 头部
+  .header {
+    background-color: #3687e1;
+  }
+}
+.kus {
+  $light-border: 1px solid #d8dce5;
+  $back-color: #ecf1f7;
+  $primary: #00a971;
+  // 侧边栏
+  .sidebar{
+    box-shadow: none;
+    border-right: $light-border;
+  }
+  // 导航栏
+  .header{
+    background-color: $back-color;
+    color: $primary;
+    border-bottom: 1px solid #d8dce5;
+  }
+  .search-icon{
+    color: $primary;
+  }
+  .option{
+    color: $primary;
+  }
+  .header-tab{
+    color: $primary;
+  }
+  .header-tab.is-active, .header-tab:hover{
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  .user-name{
+    color: $primary;
+  }
+  // 主体
+  .content-box{
+      background-color: $back-color;
+  }
+}

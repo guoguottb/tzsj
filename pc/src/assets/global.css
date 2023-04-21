@@ -1,0 +1,35 @@
+/* element-ui table tr hover color */
+html,body{
+  box-sizing: border-box !important;
+}
+ .el-table__row button {
+  margin: auto !important;
+}
+tbody .el-table__row td{
+  padding: 0 !important;
+  height: 50px !important;
+}
+.el-table tbody tr:hover>td {
+  background: #b5d1f0 !important;
+}
+.el-table__body .el-table__row.hover-row td {
+  background-color: #b5d1f0 !important;
+}
+.el-table__header thead th{
+  text-align: center !important;
+}
+.el-table__body tbody{
+  text-align: center !important;
+}
+.el-scrollbar__wrap {
+  overflow-x: auto;
+  height: calc(100% + 20px);
+}
+.el-scrollbar .el-scrollbar__wrap .el-scrollbar view{
+white-space: nowrap;
+display: inline-block;
+}
+.el-cascader-panel {
+  height: 300px !important;
+  overflow-y: auto !important;
+}

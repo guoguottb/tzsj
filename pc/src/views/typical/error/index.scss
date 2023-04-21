@@ -1,0 +1,41 @@
+.error-con-wrapper {
+  overflow: hidden;
+}
+@keyframes up {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.error-con {
+  text-align: center;
+  margin: calc(50vh - 300px);
+  animation: up 1s;
+}
+.image-con, .text-con {
+  display: inline-block;
+  vertical-align: middle;
+}
+.image-con {
+  width: 40%;
+  img {
+    width: 100%;
+  }
+}
+.text-con {
+  margin-left: 15%;
+  text-align: left;
+  color: #525a6b;
+  letter-spacing: 2px;
+  h1 {
+    font-size: 90px;
+  }
+  p {
+    font-size: 24px;
+    margin: 20px 0;
+  }
+}

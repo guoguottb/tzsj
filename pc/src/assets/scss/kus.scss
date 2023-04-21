@@ -1,0 +1,472 @@
+// kubesphere样式
+$back-color: #ecf1f7;
+$light-black: #324558;
+$normal: #eff4f9;
+$border-color: #ccd3db;
+
+$primary: #00a971;
+$success: #00c02a;
+$danger: #ff4949;
+$warn: #e9bc27;
+
+$primary-fade: #6db49d;
+
+$btn-radius: 8px;
+$box-radius: 8px;
+$input-back: #f5f8fb;
+$shadow: 0 5px 8px 0 rgba(35,45,65,.28);
+$box-shadow: 0 4px 8px 0 rgba(36,46,66,.06);
+$hover-shadow: 0 6px 16px 0 rgba(33,43,54,0.2);
+$card-body-back: #f9fbfd;
+$light-border: 1px solid #d8dce5;
+
+$back-modal: rgba(35, 45, 65, 0.4);
+.kus{
+   // button
+   .el-button{
+      background-color: $light-black;
+      border-color: $light-black;
+      color: white;
+      box-shadow: $shadow;
+      transition: 0.3s ease;
+      border-radius: $btn-radius;
+      &:hover{
+         transition: 0.3s ease;
+         box-shadow: none;
+      }
+      &.el-button.el-button--text{
+         color: $primary;
+         background-color: transparent;
+         border: none;
+         box-shadow: none;
+      }
+      &.el-button--primary{
+         background-color: $primary;
+         border: 1px solid $primary;
+      }
+      &.el-button--success{
+         background-color: $success;
+         border: 1px solid $success;
+      }
+      &.el-button--warning{
+         background-color: $warn;
+         border: 1px solid $warn;
+      }
+      &.el-button--info{
+         background-color: #909399;
+         border: 1px solid #909399;
+      }
+      &.el-button--danger{
+         background-color: $danger;
+         border: 1px solid $danger;
+      }
+   }
+   // button group
+   .el-radio-button:first-child .el-radio-button__inner{
+      border-radius: 80px 0 0 80px;
+   }
+   .el-radio-button:last-child .el-radio-button__inner{
+      border-radius: 0 80px 80px 0;
+   }
+   .el-input-group--append .el-input__inner, .el-input-group__prepend{
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+   }
+   .el-input-group{
+      .el-input-group--prepend .el-input__inner, .el-input-group__append{
+         border-top-left-radius: 0;
+         border-bottom-left-radius: 0;
+      }
+   }
+   .el-input-group__append{
+      .el-button{
+         box-shadow: none;
+      }
+   }
+   // table
+   .el-table{
+      box-shadow: $box-shadow;
+      border-radius: $box-radius;
+      transition: 0.3s ease;
+      &:hover{
+         transition: 0.3s ease;
+         box-shadow: 0 6px 16px 0 rgba(33,43,54,.2);
+      }
+      .descending .sort-caret.descending{
+         border-top-color: $primary;
+      }
+   }
+   // tabs
+   .el-tabs{
+      margin-bottom: 10px;
+   }
+   .el-tabs__active-bar.is-top{
+      display: none !important;
+   }
+   .el-tabs__nav-wrap::after{
+      display: none;
+   }
+   .el-tabs__nav-wrap{
+      overflow: visible;
+      height: 56px;
+   }
+   .el-tabs__nav-scroll{
+      overflow: visible;
+      height: 40px;
+      background-color: $light-black;
+      border-radius: $box-radius;
+      box-shadow: 0 4px 8px 0 rgba(36,46,66,.2);;
+      padding: 10px;
+   }
+   .el-tabs--card>.el-tabs__header .el-tabs__nav{
+      border: none;
+   }
+   .el-tabs--card>.el-tabs__header .el-tabs__item{
+      border: none;
+   }
+   .el-tabs__item{
+      border-radius: $box-radius;
+      color: white;
+      font-size: 12px;
+      height: 36px;
+      &.is-active{
+         color: white;
+         box-shadow: $shadow;
+         background-color: $primary;
+         box-shadow: 0 8px 16px 0 rgba(85,188,138,.36);
+      }
+      &:hover:not(.is-active){
+         color: $primary;
+      }
+   }
+   .el-tabs--top .el-tabs__item.is-top:nth-child(2), .el-tabs--top .el-tabs__item.is-bottom:nth-child(2), .el-tabs--bottom .el-tabs__item.is-top:nth-child(2), .el-tabs--bottom .el-tabs__item.is-bottom:nth-child(2){
+      padding-left: 20px;
+   }
+   .el-tabs--top .el-tabs__item.is-top:last-child, .el-tabs--top .el-tabs__item.is-bottom:last-child, .el-tabs--bottom .el-tabs__item.is-top:last-child, .el-tabs--bottom .el-tabs__item.is-bottom:last-child{
+      padding-right: 20px;
+   }
+   .el-tabs__content{
+      overflow: visible;
+   }
+   .el-tabs--border-card>.el-tabs__header .el-tabs__item.is-active{
+      background-color: $primary;
+      color: white;
+      border: none;
+   }
+   .el-tabs--border-card>.el-tabs__header .el-tabs__item:not(.is-disabled):hover{
+      color: white;
+   }
+   // menu
+      .sidebar-el-menu.el-menu{
+         background-color: $back-color !important;
+      }
+      .el-menu-item, .el-submenu__title{
+         background-color: $back-color !important;
+         &.is-active{
+            color: $primary !important;
+            background-color: $back-color !important;
+         }
+         &:hover{
+            color: $primary !important;
+            background-color: $back-color !important;
+         }
+      }
+      .el-scrollbar{
+         background-color: $back-color;
+      }
+      .sidebar-container.has-logo{
+         box-shadow: 2px 0 2px rgba(0,0,0,0.2);
+      }
+   .el-pagination.is-background .el-pager li:not(.disabled).active{
+      background-color: $primary;
+      color: white;
+   }
+   .el-pagination__sizes .el-input .el-input__inner:hover{
+      border-color: $primary;
+   }
+   .el-pager li{
+      &.active{
+         color: $primary;
+      }
+      &:hover{
+         color: $primary;
+      }
+   }
+   // input
+   .el-input__inner, .el-textarea__inner{
+      border-radius: $btn-radius;
+      background-color: $input-back;
+      transition: background-color 0.3s ease;
+      &:focus {
+         transition: background-color 0.3s ease;
+         background-color: white;
+         border: 1px solid $border-color;
+      }
+   }
+   .el-textarea__inner{
+      border-radius: $box-radius;
+   }
+   .el-select .el-input__inner{
+      border-radius: $btn-radius;
+   }
+   // input-group
+   .el-input-group__prepend, .el-input-group__append{
+      border-radius: $btn-radius;
+   }
+   // link
+   .link-type:hover, .link-type:focus:hover{
+      color: $primary;
+   }
+   .el-link.el-link--default:after, .el-link.el-link--primary.is-underline:hover:after, .el-link.el-link--primary:after{
+      border-color: $primary;
+   }
+   // select
+   .el-select .el-input.is-focus .el-input__inner{
+      border-color: $primary;
+   }
+   // tree
+   .el-tree{
+      border-radius: $box-radius;
+      transition: 0.3s ease;
+      box-shadow: $box-shadow;
+      &:hover{
+         box-shadow: $hover-shadow;
+         transition: 0.3s ease;
+      }
+   }
+   // dialog
+   .el-dialog{
+      border-radius: $box-radius;
+   }
+   .el-dialog__wrapper{
+      background-color: $back-modal;
+   }
+   .el-dialog__headerbtn:focus .el-dialog__close, .el-dialog__headerbtn:hover .el-dialog__close{
+      color: $primary;
+   }
+   .dialog-fade-enter-active {
+      animation: zoom-in 0.3s
+   }
+   .dialog-fade-leave-active {
+      animation: zoom-out 0.3s
+   }
+   @keyframes zoom-in {
+      0% {
+         transform: scale(0);
+         opacity: 0
+      }
+      100% {
+         transform: scale(1);
+         opacity: 1
+      }
+   }
+   @keyframes zoom-out {
+      0% {
+         transform: scale(1);
+         opacity: 1
+      }
+      100% {
+         transform: scale(0);
+         opacity: 0
+      }
+   }
+   // radio
+   .el-radio__input.is-checked .el-radio__inner{
+      background-color: $primary;
+      border-color: $primary;
+   }
+   .el-radio__input.is-checked+.el-radio__label{
+      color: $primary;
+   }
+   .el-radio-button__orig-radio:checked+.el-radio-button__inner{
+      background-color: $primary;
+      border-color: $primary;
+      &:hover{
+         color: white;
+      }
+   }
+   .el-radio-button__inner:hover{
+      color: $primary;
+   }
+   .is-bordered{
+      border-radius: $btn-radius;
+   }
+   .el-radio.is-bordered.is-checked{
+      border-color: $primary;
+   }
+   .el-radio__inner:hover {
+      border-color: $primary;
+   }
+   // checkbox
+   .el-checkbox__input.is-checked .el-checkbox__inner, .el-checkbox__input.is-indeterminate .el-checkbox__inner{
+      background-color: $primary;
+      border-color: $primary;
+   }
+   .el-checkbox__input.is-checked+.el-checkbox__label{
+      color: $primary;
+   }
+   .el-checkbox__input.is-disabled.is-checked .el-checkbox__inner{
+      background-color: $primary-fade;
+      border-color: $primary-fade;
+   }
+   .el-checkbox__input.is-disabled+span.el-checkbox__label{
+      color: $primary-fade;
+   }
+   .el-checkbox__inner:hover{
+      border-color: $primary;
+   }
+   
+   // checkbox button
+   .el-checkbox-button.is-checked .el-checkbox-button__inner{
+      background-color: $primary;
+      border-color: $primary;
+      box-shadow: none;
+      &:hover{
+         color: white;
+      }
+   }
+   .el-checkbox-button.is-focus .el-checkbox-button__inner{
+      border-color: #DCDFE6;
+   }
+   .el-checkbox.is-bordered.is-checked{
+      border-color: $primary;
+   }
+   .el-checkbox-button__inner:hover{
+      color: $primary;
+   }
+   .el-checkbox-button:first-child .el-checkbox-button__inner{
+      border-radius: 80px 0 0 80px;
+   }
+   .el-checkbox-button:last-child .el-checkbox-button__inner{
+      border-radius: 0 80px 80px 0;
+   }
+   .el-checkbox.is-bordered{
+      border-radius: $btn-radius;
+   }
+   // card
+   .el-card.is-always-shadow, .el-card.is-hover-shadow:focus{
+      box-shadow: $box-shadow;
+      border-radius: $box-radius;
+      &:hover{
+         box-shadow: $hover-shadow;
+      }
+      .el-card__header{
+         font-weight: bolder;
+         padding: 14px 20px;
+         border-bottom: none
+      }
+      .el-card__body{
+         border-radius: $box-radius;
+         background-color: $card-body-back;
+         margin: 10px;
+      }
+   }
+   // link
+   .el-link.el-link--primary{
+      color: $primary;
+   }
+   // date
+   .el-range-editor.is-active, .el-range-editor.is-active:hover{
+      border-color: $primary;
+   }
+   // backtop
+   .el-backtop, .el-calendar-table td.is-today{
+      color: $primary;
+   }
+   // switch
+   .el-switch.is-checked .el-switch__core{
+      border-color: $primary;
+      background-color: $primary;
+   }
+   .el-switch__label.is-active{
+      color: $primary;
+   }
+   // badge
+   .el-badge__content--primary{
+      background-color: $primary;
+   }
+   // loading
+   .el-loading-spinner .path{
+      stroke: $primary;
+   }
+   // message-box
+   .el-message-box{
+      border-radius: $box-radius;
+   }
+   .msgbox-fade-enter-active{
+      animation: zoom-in 0.3s;
+   }
+   .msgbox-fade-leave-active{
+      animation: zoom-out 0.3s;
+   }
+   .v-modal{
+      background-color: rgb(35, 45, 65);
+   }
+   // message 
+   .el-message{
+      border-radius: $box-radius;
+      box-shadow: $box-shadow;
+   }
+   .el-message-box__title{
+      font-weight: bold;
+   }
+   // dropdown
+   .el-dropdown-menu__item:focus, .el-dropdown-menu__item:not(.is-disabled):hover{
+      color: $primary;
+      background-color: #c2f2e2;
+   }
+   .el-select-dropdown__item.selected{
+      color: $primary;
+   }
+   // tooltip
+   .el-tooltip__popper{
+      border-radius: $box-radius;
+      box-shadow: $box-shadow;
+   }
+   // date
+   .el-date-table td.today span{
+      color: $primary;
+   }
+   .el-date-table td.available:hover{
+      color: $primary;
+   }
+   // input-number
+   .el-input-number__decrease{
+      border-radius: 80px 0 0 80px;
+   }
+   .el-input-number__increase{
+      border-radius: 0 80px 80px 0;
+   }
+   // cascader
+   .el-cascader .el-input .el-input__inner:focus, .el-cascader .el-input.is-focus .el-input__inner {
+      border-color: $primary;
+   }
+   .el-cascader-node.in-active-path, .el-cascader-node.is-active, .el-cascader-node.is-selectable.in-checked-path {
+      color: $primary;
+   }
+
+   // 服务管理列表
+  .g-a{
+      span{
+      display: inline-block;
+      }
+      display: inline-block;
+      color: #333;
+      width: 100%;
+      height: 100%;
+      padding: 0 0 0 20px;
+      text-decoration: none;
+      &:hover {
+      color: $primary;
+      background:rgba(239,246,251,1);
+      }
+   }
+   .g-type-active{
+      color: $primary;
+      background:rgba(239,246,251,1);
+      .list-item-active{
+        background: $primary;
+        color:#fff;
+      }
+    }
+}

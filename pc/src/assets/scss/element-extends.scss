@@ -1,0 +1,225 @@
+/*
+   文件介绍：
+      为了解决Element UI默认样式的先天不足，特将某些样式重新改写，以获得更好的用户体验。
+   和ele.scss有什么区别：
+      原则上都是为了提供更好的视觉体验，但本文件更关心全体样式，四套皮肤共有的样式，ele.scss更关心所对应皮肤的样式
+*/
+// 字体一般字号，一般将12px覆盖成14px
+$normal-size: 14px;
+// 字体最小字号，最小字号不得小于13px
+$small-size: 13px;
+
+body {
+   font-size: 14px;
+   font-family: 微软雅黑, 黑体;
+   color: black;
+   h1, h2, h3, p {
+      margin: 0;
+   }
+}
+// 【table】
+// 调整大小为14px
+.el-table--mini, .el-table--small, .el-table__expand-icon {
+   font-size: $normal-size;
+   // 需求：表格文字改成14px
+   color: #888888;
+}
+// 长文本自动隐藏并显示三个点
+.el-table th>.cell, .el-table .cell {
+   overflow: hidden;
+   word-break: keep-all;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+}
+// 去掉每个单元格的border-bottom
+.el-table td {
+   border-bottom: none;
+}
+// 表头样式
+.el-table th {
+   font-weight: normal;
+   color: #333333;
+}
+// 去掉表格最下面的线
+.el-table::before {
+   display: none;
+}
+// 无数据
+.el-table__empty-block {
+   background-image: url('./img/image-no-data.png');
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: auto 70%;
+   height: 30vh !important;
+   .el-table__empty-text {
+      display: none;
+   }
+}
+// stripe背景色
+.el-table--striped .el-table__body tr.el-table__row--striped td {
+   background-color: #f6f7f8;
+   &:hover {
+      background-color: #f5f7fa;
+   }
+}
+
+// 【elx】
+.elx-editable {
+   .el-input.is-active .el-input__inner, .el-input__inner:focus {
+      border: 1px solid #3687e1;
+      box-shadow: 0 0 7px rgba(68, 153, 250, 0.25);
+   }
+}
+
+// 【dropdown】
+.el-dropdown-menu {
+   box-shadow: 0 4px 18px rgba(12, 4, 8, 0.1);
+}
+.el-dropdown-menu__item {
+   cursor: default;
+}
+// 【select】
+.el-select-dropdown {
+   box-shadow: 0 4px 18px rgba(12, 4, 8, 0.1);
+   border: none;
+}
+
+// 【input】
+.el-input--small {
+   font-size: $small-size;
+}
+// 【button】
+.el-button--mini, .el-button--small {
+   font-size: $small-size;
+}
+// 【悬浮窗】
+// 不再使用原生的黑色样式
+.el-tooltip__popper.is-dark {
+   background-color: #ebf3fc;
+   color: black;
+   border: 1px solid #d0e4fb;
+   box-shadow: 0 5px 10px rgba(206, 206, 206, 0.75);
+   .popper__arrow {
+     // 小箭头颜色是js加上的，不易修改，暂时隐藏
+     display: none;
+   }
+}
+.el-popper .popper__arrow, .el-popper .popper__arrow::after {
+   display: none;
+}
+
+// 【el-menu】
+.el-menu {
+   user-select: none;
+}
+// 优化版菜单
+.g-menu-texture {
+   background-image: url(./img/menu-texture.png);
+   background-color: #fff;
+   background-repeat: no-repeat;
+   background-position: left bottom;
+   background-size: 220px;
+   background-attachment: fixed;
+   .el-menu {
+      background-color: transparent;
+   }
+}
+// .el-menu--collapse
+// 优化版下级菜单
+.g-submenu {
+   .el-submenu__title, &.el-menu-item {
+      height: 40px;
+      line-height: 40px;
+      font-size: 12px;
+   }
+   &.el-menu-item {
+      color: #585858;
+   }
+}
+// 【el-dropdown】
+.el-dropdown-menu {
+   border: none;
+}
+// 【el-pagination】
+.el-pagination {
+   font-weight: normal;
+}
+.el-pagination.is-background .btn-next, .el-pagination.is-background .btn-prev, .el-pagination.is-background .el-pager li {
+   min-width: 25px;
+   margin: 0;
+   background-color: white;
+}
+.el-pagination.is-background .btn-next, .el-pagination.is-background .btn-prev, .el-pagination.is-background .el-pager li {
+   border: 1px solid #e6e6e6;
+}
+.el-pagination.is-background .btn-prev {
+   border-radius: 5px 0 0 5px;
+}
+.el-pagination.is-background .btn-next {
+   border-radius: 0 5px 5px 0;
+}
+.el-pagination.is-background .el-pager li {
+   border-radius: 0;
+}
+
+// 【el-popover】
+.el-popover {
+   padding: 22px;
+}
+
+.g-popover.warning {
+   background-color: #fdf6ec;
+   border: 1px solid orange;
+   color: orange;
+   box-shadow: none;
+   .el-popover__title {
+      color: orange;
+   }
+}
+
+// 【el-radio】
+.el-radio__inner::after {
+   width: 8px;
+   height: 8px;
+}
+// 【el-form】
+.el-form-item--mini.el-form-item, .el-form-item--small.el-form-item {
+   margin-bottom: 24px;
+}
+.el-form-item--mini.el-form-item:last-child, .el-form-item--small.el-form-item:last-child {
+   margin-bottom: 5px;
+}
+// 【a-anchor】
+.ant-anchor-link {
+   a:focus {
+      text-decoration: none;
+   }
+}
+// 为label自动添加冒号
+.el-form-item__label::after {
+   content: "：";
+}
+// 主体
+.content-box {
+   background-color: #f2f2f2;
+}
+
+.pull-left {
+   float: left;
+}
+.pull-right {
+   float: right;
+}
+.clearfix, [clearfix] {
+   clear: both;
+}
+@media (max-width: 1400px) {
+   .g-menu-texture {
+      background-size: 170px;
+   }
+}
+.el-date-editor.el-range-editor .el-range-separator{
+   min-width: 5%;
+   padding: 0 5px;
+   width: auto;
+}
